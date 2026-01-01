@@ -1,9 +1,11 @@
+#level 1
 I download Yosef's repo
 
 minikube start
 
 minikube status
 
+#level 2 docker image
 git checkout -b dockerfile
 
 docker build -t dforst98/streamlit .
@@ -16,14 +18,18 @@ docker login
 
 docker push dforst98/streamlit:latest
 
+#validation
 docker rmi dforst98/streamlit
 
 docker run -d -p 8080:8080 dforst98/streamlit:latest
 
+#level 3.1 pod
 git checkout -b podBranch
 
+#level 3.2 service
 git checkout -b serviceBranch
 
+#level 4 run app
 git checkout -b runApp
 
 kubectl apply -f pod.yaml
@@ -35,3 +41,10 @@ kubectl get pod streamlit-pod
 kubectl get service streamlit-service
 
 minikube service streamlit-service
+
+#level 5 additional tests
+kubectl logs streamlit-pod
+
+kubectl describe pod streamlit-pod
+
+kubectl describe service streamlit-service
