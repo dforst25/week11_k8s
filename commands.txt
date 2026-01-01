@@ -1,0 +1,22 @@
+I download Yosef's repo
+
+minikube start
+
+minikube status
+
+git checkout -b dockerfile
+
+docker build -t dforst98/streamlit .
+
+docker run -d -p 8080:8080 dforst98/streamlit
+
+docker ps
+
+docker login
+
+docker push dforst98/streamlit:latest
+
+docker rmi dforst98/streamlit
+
+docker run -d -p 8080:8080 dforst98/streamlit:latest
+
