@@ -22,3 +22,16 @@ docker run -d -p 8080:8080 dforst98/streamlit:latest
 
 git checkout -b podBranch
 
+git checkout -b serviceBranch
+
+git checkout -b runApp
+
+kubectl apply -f pod.yaml
+
+kubectl apply -f service.yaml
+
+kubectl get pod streamlit-pod
+
+kubectl get service streamlit-service
+
+minikube service streamlit-service
