@@ -11,3 +11,12 @@ docker build -t dforst98/streamlit .
 docker run -d -p 8080:8080 dforst98/streamlit
 
 docker ps
+
+docker login
+
+docker push dforst98/streamlit:latest
+
+docker rmi dforst98/streamlit
+
+docker run -d -p 8080:8080 dforst98/streamlit:latest
+
