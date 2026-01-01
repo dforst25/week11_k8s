@@ -6,6 +6,7 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
+# main.py is the all project
 COPY main.py main.py
 
 EXPOSE 8080
